@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.7"
+services:
+  - docker
+
+  
+deploy:
+  provider: heroku
+  api_key:
+    secure: $deploy_key
+  app: pdgbackend
+  on:
+    repo: lesijay/PDG-App-drf
+
+before_script: pip install docker-compose
+
+script:
+  - docker-compose run web sh -c "python manage.py migrate"
+  - docker-compose run web sh -c "python manage.py test"

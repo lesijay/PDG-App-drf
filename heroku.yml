@@ -6,7 +6,7 @@ release:
   image: web
   command:
     - python manage.py migrate
-  image: worker
+
 run:
-  web: gunicorn --bind 0.0.0.0:$PORT PDG_Project.wsgi:application
+  web: gunicorn PDG_Project.wsgi:application --bind 0.0.0.0:$PORT 
   

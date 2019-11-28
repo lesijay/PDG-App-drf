@@ -85,6 +85,7 @@ WSGI_APPLICATION = 'PDG_Project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+DATABASES = {}
 if DEBUG== True:
     DATABASES = {
         'default': {

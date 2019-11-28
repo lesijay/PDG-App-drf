@@ -1,5 +1,12 @@
 build:
   docker:
     web: Dockerfile
+  
+release:
+  image: web
+  command:
+    - python manage.py migrate
+  image: worker
 run:
-  web: bundle exec puma -C config/puma.rb
+  web: gunicorn --bind 0.0.0.0:$PORT PDG_Project.wsgi:application
+  

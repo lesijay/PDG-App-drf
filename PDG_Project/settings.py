@@ -82,6 +82,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PDG_Project.wsgi.application'
 
+print(DEBUG)
+print('jhuefhufhgduhjgfq')
+print(SECRET_KEY)
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -90,10 +93,10 @@ if DEBUG== True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'pgddb',
-            'USER': 'lesijay',
-            'PASSWORD': '1234',
-            'HOST': 'localhost',
+            'NAME': 'postgres',
+            'USER': 'postgres',
+            'PASSWORD': '',
+            'HOST': 'db',
             'PORT': '5432',
         }
     }

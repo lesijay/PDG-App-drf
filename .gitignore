@@ -1,0 +1,13 @@
+
+#project files
+db.local
+venv
+
+# hidden files
+.vscode
+.DS_Store
+.env
+__pycache__
+personality_test/migrations/__pycache__
+personality_test/__pycache__
+PDG_Project/__pycache__
